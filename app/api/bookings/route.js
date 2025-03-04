@@ -6,6 +6,8 @@ export async function POST(req) {
     const { name, email, phone, date, time, guests, specialRequest } =
       await req.json();
 
+    console.log("REcieved email ", email);
+
     const fixedTime = new Date(`2000-01-01T${time}`).toLocaleTimeString(
       "it-IT",
       {
@@ -57,6 +59,8 @@ export async function POST(req) {
     📅 **Date:  ${date}  
     🕒 **Time:  ${fixedTime}  
     👥 **Guests:  ${guests}  
+    📞 **Phone: ${phone}  
+
     
     📍 **Address:** Piazza Del Carmine 4/R, Florence  
     

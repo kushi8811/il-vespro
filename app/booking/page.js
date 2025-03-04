@@ -16,6 +16,7 @@ const prata = Prata({
 });
 
 const sendBookingEmail = async (bookingData) => {
+  console.log("Sending booking data:BookingData::", bookingData);
   try {
     const res = await fetch("/api/bookings", {
       method: "POST",
@@ -68,11 +69,11 @@ export default function BookingForm() {
             specialRequest: formData.specialRequest,
           },
         ])
-        .select("*")
-        .single();
+        .select("*");
+
       if (error) throw error;
 
-      await sendBookingEmail(data);
+      await sendBookingEmail(data[0]);
       setSuccess(true);
 
       setFormData({
@@ -199,6 +200,7 @@ export default function BookingForm() {
               placeholder="Enter number of guests"
               required
               max={20}
+              min={1}
               value={formData.guests}
               onChange={(e) => {
                 const value = parseInt(e.target.value);
@@ -225,6 +227,7 @@ export default function BookingForm() {
           {/* Submit Button */}
           <button
             type="submit"
+            disabled={loading}
             className="w-full mt-4 bg-[#e09e49] text-white py-2 rounded-md hover:bg-[#c68a3c] transition-all"
           >
             {loading ? "Booking..." : "Book Now"}

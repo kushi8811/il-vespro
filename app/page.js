@@ -8,6 +8,7 @@ import Experience from "./_components/Experience";
 import Hero from "./_components/Hero";
 import Logo from "./_components/Logo";
 import Slider from "./_components/Slider";
+import { Suspense } from "react";
 
 // Slide-in animation
 const slideInVariant = {
@@ -18,7 +19,9 @@ const slideInVariant = {
 export default function Home() {
   return (
     <div className="bg-accent-200">
-      <Hero />
+      <Suspense>
+        <Hero />
+      </Suspense>
 
       <motion.div
         initial="hidden"
