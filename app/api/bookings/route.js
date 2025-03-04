@@ -25,52 +25,50 @@ export async function POST(req) {
       },
     });
 
-    // **Email to Restaurant Owner**
     const ownerMailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER, // Owner's email
       subject: "📅 New Table Booking Request - Il Vespro Firenze",
-      text: `Dear Team,
+      html: `Dear Team,<br><br>
     
-    You have received a new table booking request:
+      You have received a new table booking request:<br><br>
     
-    🔹 **Name: ${name}  
-    🔹 **Email: ${email}  
-    🔹 **Phone: ${phone}  
-    🔹 **Date: ${date}  
-    🔹 **Time: ${fixedTime}  
-    🔹 **Guests: ${guests}  
-    🔹 **Special Requests:** ${specialRequest || "None"}  
+      🔹 <strong>Name:</strong> ${name} <br>
+      🔹 <strong>Email:</strong> ${email} <br>
+      🔹 <strong>Phone:</strong> ${phone} <br>
+      🔹 <strong>Date:</strong> ${date} <br>
+      🔹 <strong>Time:</strong> ${fixedTime} <br>
+      🔹 <strong>Guests:</strong> ${guests} <br>
+      🔹 <strong>Special Requests:</strong> ${specialRequest || "None"} <br><br>
     
-    
-    
-    Best,  
-    Il Vespro Firenze`,
+      Best, <br>
+      <strong>Il Vespro Firenze</strong>
+      `,
     };
 
     const customerMailOptions = {
       from: process.env.EMAIL_USER,
       to: email, // Customer's email
       subject: "✅ Your Table Reservation is Confirmed - Il Vespro Firenze",
-      text: `Dear ${name},
+      html: `Dear ${name},<br><br>
     
-    We are pleased to confirm your table reservation at **Il Vespro Firenze**:
+      We are pleased to confirm your table reservation at <strong>Il Vespro Firenze</strong>:<br><br>
     
-    📅 **Date:  ${date}  
-    🕒 **Time:  ${fixedTime}  
-    👥 **Guests:  ${guests}  
-    📞 **Phone: ${phone}  
-
+      📅 <strong>Date:</strong> ${date} <br>
+      🕒 <strong>Time:</strong> ${fixedTime} <br>
+      👥 <strong>Guests:</strong> ${guests} <br>
+     
     
-    📍 **Address:** Piazza Del Carmine 4/R, Florence  
+      📍 <strong>Address:</strong> Piazza Del Carmine 4/R, Florence <br><br>
     
-    🍽️ We look forward to welcoming you and ensuring you have a delightful dining experience.  
+      🍽️ We look forward to welcoming you and ensuring you have a delightful dining experience.<br><br>
     
-    If you have any questions or need to modify your booking, feel free to contact us.  
+      If you have any questions or need to modify your booking, feel free to contact us.<br><br>
     
-    Best Regards,  
-    **Il Vespro Firenze Team**  
-    📞 [ 0557098883 ]  `,
+      Best Regards, <br>
+      <strong>Il Vespro Firenze Team</strong><br>
+      📞 <strong>+39 0557098883</strong>
+      `,
     };
 
     // **Send Emails**
