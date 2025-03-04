@@ -16,7 +16,6 @@ const prata = Prata({
 });
 
 const sendBookingEmail = async (bookingData) => {
-  console.log("Sending booking data:BookingData::", bookingData);
   try {
     const res = await fetch("/api/bookings", {
       method: "POST",
