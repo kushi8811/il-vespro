@@ -198,6 +198,7 @@ export default function BookingForm() {
               className="w-full p-2 mt-1 bg-transparent border-b border-white focus:outline-none focus:border-[#e09e49] text-white"
               placeholder="Enter number of guests"
               required
+              max={20}
               value={formData.guests}
               onChange={(e) => {
                 const value = parseInt(e.target.value);
