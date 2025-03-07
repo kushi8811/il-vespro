@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { createClient } from "@supabase/supabase-js";
-import { Eagle_Lake, Prata } from "next/font/google";
+import { Playfair_Display, Prata } from "next/font/google";
 
-const eagle = Eagle_Lake({
+const eagle = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: "400",

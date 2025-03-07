@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import restaurantBg from "@/public/images/1.jpeg"; // Replace with an actual image
-import { Eagle_Lake, Prata } from "next/font/google";
-const eagle = Eagle_Lake({
+import { Playfair_Display, Prata } from "next/font/google";
+const eagle = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: "400",

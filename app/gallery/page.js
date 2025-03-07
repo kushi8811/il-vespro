@@ -8,10 +8,10 @@ import img3 from "@/public/images/int2.jpeg";
 import img4 from "@/public/images/3.jpeg";
 import img5 from "@/public/images/about1.jpeg";
 import img6 from "@/public/images/5.jpeg";
-import { Eagle_Lake, Prata } from "next/font/google";
+import { Playfair_Display, Prata } from "next/font/google";
 import Video from "../_components/Video";
 
-const eagle = Eagle_Lake({
+const eagle = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: "400",

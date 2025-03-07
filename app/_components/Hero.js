@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import interno from "@/public/images/int3.jpeg";
-import { Eagle_Lake } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 
-const eagle = Eagle_Lake({
+const eagle = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
@@ -45,7 +45,7 @@ const Hero = () => {
         <h1
           className={` ${eagle.className}    text-white text-5xl md:text-6xl lg:text-7xl font-serif tracking-wide`}
         >
-          il Vespro
+          IL VESPRO
         </h1>
         <p className="text-white text-lg md:text-xl lg:text-2xl mt-3 md:mt-5 font-light italic max-w-lg">
           A taste of elegance in every bite.

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Eagle_Lake, Prata } from "next/font/google";
-const eagle = Eagle_Lake({
+import { Playfair_Display, Prata } from "next/font/google";
+const eagle = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: "400",

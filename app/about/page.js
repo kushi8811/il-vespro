@@ -1,8 +1,8 @@
 import Image from "next/image";
 import about1 from "@/public/images/about1.jpeg";
 import about2 from "@/public/images/about2.jpg";
-import { Eagle_Lake, Prata } from "next/font/google";
-const eagle = Eagle_Lake({
+import { Playfair_Display, Prata } from "next/font/google";
+const eagle = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
