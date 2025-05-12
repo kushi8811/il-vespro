@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import Script from "next/script"; // ✅ Use this!
+import CookieBanner from "./_components/CookieBanner";
 
 const lora = Lora({
   variable: "--font-geist-sans",
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
