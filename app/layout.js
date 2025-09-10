@@ -4,7 +4,7 @@ import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import Script from "next/script"; // ✅ Use this!
 import CookieBanner from "./_components/CookieBanner";
-
+import PopEvent from "./_components/PopEvent";
 const lora = Lora({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
         {/* End Google Tag Manager (noscript) */}
 
         <Header />
+        <PopEvent />
         {children}
         <Footer />
         <CookieBanner />
