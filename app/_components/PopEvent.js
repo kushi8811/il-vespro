@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import image from "@/public/images/event.jpg";
+import image from "@/public/images/event1.jpg";
 export default function EventPopup() {
   const [show, setShow] = useState(false);
   const [animate, setAnimate] = useState(false);
