@@ -8,6 +8,7 @@ import Experience from "./_components/Experience";
 import Hero from "./_components/Hero";
 import Logo from "./_components/Logo";
 import Slider from "./_components/Slider";
+import Bistecca from "./_components/Bistecca";
 import { Suspense } from "react";
 
 // Slide-in animation
@@ -30,6 +31,22 @@ export default function Home() {
         viewport={{ once: true }}
       >
         <EssenceOfIlVespro />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={slideInVariant}
+        viewport={{ once: true }}
+      >
+        <Bistecca />
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={slideInVariant}
+        viewport={{ once: true }}
+      >
+        <Experience />
       </motion.div>
 
       <motion.div
@@ -57,15 +74,6 @@ export default function Home() {
         viewport={{ once: true }}
       >
         <Slider />
-      </motion.div>
-
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        variants={slideInVariant}
-        viewport={{ once: true }}
-      >
-        <Experience />
       </motion.div>
 
       <motion.div
