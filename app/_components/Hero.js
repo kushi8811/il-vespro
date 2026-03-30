@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import interno from "@/public/images/int3.jpeg";
+import interno from "@/public/images/DSC.jpg";
 import { Playfair_Display } from "next/font/google";
 
 const eagle = Playfair_Display({
@@ -47,6 +47,13 @@ const Hero = () => {
         >
           IL VESPRO
         </h1>
+        {/* Decorative Line */}
+        <div className="w-40 border-t-2 border-white mb-1 mt-4"></div>
+        <h5
+          className={` ${eagle.className}    text-white text-2xl md:text-2xl lg:text-2xl font-serif tracking-wide mb-16`}
+        >
+          Stakehouse
+        </h5>
         <p className="text-white text-lg md:text-xl lg:text-2xl mt-3 md:mt-5 font-light italic max-w-lg">
           A taste of elegance in every bite.
         </p>
