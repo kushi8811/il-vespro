@@ -1,11 +1,16 @@
 "use client";
 import Image from "next/image";
-import menu1 from "@/public/images/menu1.jpeg";
-import menu2 from "@/public/images/menu2.jpeg";
-import menu3 from "@/public/images/menu3.jpeg";
-import menu4 from "@/public/images/menu4.jpeg";
-import menu5 from "@/public/images/menu5.jpeg";
+import menu1 from "@/public/images/menu1.jpg";
+import menu2 from "@/public/images/menu2.jpg";
+import menu3 from "@/public/images/menu3.jpg";
+import menu4 from "@/public/images/menu4.jpg";
+import menu5 from "@/public/images/menu5.jpg";
+import menu6 from "@/public/images/menu6.jpg";
+import menu7 from "@/public/images/menu7.jpg";
+import menu8 from "@/public/images/menu8.jpg";
 import { Eagle_Lake, Prata } from "next/font/google";
+
+
 
 const eagle = Eagle_Lake({
   subsets: ["latin"],
@@ -13,8 +18,7 @@ const eagle = Eagle_Lake({
   weight: "400",
 });
 
-const menuImages = [menu1, menu2, menu3, menu4, menu5];
-
+const menuImages = [menu1, menu2, menu3, menu4, menu5,menu6,menu7,menu8];
 export default function Menu() {
   return (
     <div className="menu-container max-w-screen-md mx-auto bg-accent-100  py-12">
